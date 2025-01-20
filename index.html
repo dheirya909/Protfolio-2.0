@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dheirya Kharbanda | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h2>Dheirya Kharbanda .</h2>
+        </div>
+        
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="img">
+            <div class="profile-container">
+                <img src="dheirya.png" alt="Dheirya Kharbanda's profile picture">
+            </div>
+            <h1>Dheirya Kharbanda</h1>
+            <p class="subtitle">Web Developer & Designer</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-primary">Get in Touch</a>
+                <a href="#projects" class="cta-secondary">View Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this after your hero section -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <div class="scroll-instructions">
+                <span class="scroll-icon">⟷</span>
+                <span>Scroll horizontally</span>
+            </div>
+        </div>
+        
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project1.png" alt="Project 1">
+                </div>
+                <div class="project-content">
+                    <h3>BBPS GRH's Science society website</h3>
+                    <p class="project-tech">HTML5 • CSS3 • JS</p>
+                    <p class="project-description">A Front-end Dynamic website with modern UI/UX.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        <a href="https://bbpsgr-sciencesociety.vercel.app/index.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project2.png" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>To Do List</h3>
+                    <p class="project-tech">JS • CSS3 • HTML5</p>
+                    <p class="project-description">A responsive web application to manage your everyday tasks</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        <a href="https://to-do-list-portal.vercel.app/" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project3.png" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>Disaster Management Website</h3>
+                    <p class="project-tech">JS • CSS3 • HTML5</p>
+                    <p class="project-description">A responsive web application with Disaster Management courses</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        <a href="https://dart-lime.vercel.app/" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="skills-header">
+            <div class="header-content">
+                <span class="section-subtitle">What I Do</span>
+                <h2>My Expertise</h2>
+            </div>
+            <div class="last-updated">
+                <span class="update-icon">↻</span>
+                Last updated: 2025-01-20
+            </div>
+        </div>
+    
+        <div class="skills-container">
+            <!-- Frontend Skills -->
+            <div class="skill-category">
+                <h3>Frontend Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-html5"></i>
+                        <span class="skill-name">HTML5</span>
+                        <div class="skill-level">
+                            <div class="progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt"></i>
+                        <span class="skill-name">CSS3</span>
+                        <div class="skill-level">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill-card">
+                        <i class="fab fa-js"></i>
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-level">
+                            <div class="progress" style="width: 18%"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill-card">
+                        <i class="fab fa-react"></i>
+                        <span class="skill-name">React</span>
+                        <div class="skill-level">
+                            <div class="progress" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+    <script>
+        // Add this to your JavaScript file
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate skill bars when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelector('.progress').style.width = 
+                        entry.target.querySelector('.progress').getAttribute('style').split(':')[1];
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.skill-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <span class="timestamp">Last online: 2025-01-20 12:15:26 UTC</span>
+                <h2>Let's Connect</h2>
+                <p class="contact-subtitle">Feel free to reach out through any of these platforms</p>
+            </div>
+
+            <div class="contact-methods">
+                <a href="mailto:dheiryakharbanda101@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <span>Important Emails only</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/dheirya909" target="_blank" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <div class="contact-info">
+                        <h3>GitHub</h3>
+                        <span>@dheirya909</span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/dheirya-kharbanda-733b4732b/" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div class="contact-info">
+                        <h3>LinkedIn</h3>
+                        <span>Connect with me</span>
+                    </div>
+                </a>
+
+                <a href="https://x.com/dheirya_kh" target="_blank" class="contact-item">
+                    <i class="fab fa-twitter"></i>
+                    <div class="contact-info">
+                        <h3>Twitter</h3>
+                        <span>@dheirya_kh</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
